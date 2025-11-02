@@ -27,6 +27,7 @@ jobs:
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./energy-demo
+          file: ./energy-demo/Dockerfile
           push: true
           tags: ghcr.io/hoppetoss/energy-demo:latest
